@@ -70,7 +70,7 @@ function checkResult() {
 
   let gameDraw = !gameState.includes("");
 
-  if(gameDraw){
+  if(gameDraw && gameWon == false){
     gameRunning = false;
     gameOver("Draw");
   }

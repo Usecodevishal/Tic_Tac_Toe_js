@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Game: Tic Tac Toe</title>
   </head>
   <body class="flex justify-center items-center w-screen h-screen bg-[#f4f4f4]">
-    <div id="startGame-page" class=" shadow-md w-1/3 rounded-md bg-white h-fit text-center">
+    <div id="startGame-page" class=" shadow-md md:w-1/3 w-1/2 rounded-md bg-white h-fit text-center">
       <h1 class="text-4xl font-semibold text-gray-700 mb-8">Tic Tac Toe</h1>
       <input
         id="player-1"
@@ -31,27 +31,27 @@
       
     </div>
 
-    <div id="GameBoard" class="shadow-md hidden w-1/3 h-fit pb-4 bg-white rounded text-center">
+    <div id="GameBoard" class="shadow-md hidden md:w-1/3 w-1/2 h-fit pb-4 bg-white rounded text-center">
       <h2 id="player-turn" class="text-2xl mb-4"></h2>
-      <div class="container w-full h-full grid grid-cols-3 place-content-center gap-4 gap-x-0 pl-16">
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(0)"></div>
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(1)"></div>
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(2)"></div>
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(3)"></div>
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(4)"></div>
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(5)"></div>
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(6)"></div>
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(7)"></div>
-        <div class="cell border-2 border-blue-500 grid-box rounded  hover:bg-slate-300 hover:scale-110 transition-all w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(8)"></div>
+      <div class="container w-full h-full grid grid-cols-3 justify-center items-center gap-4 gap-x-4 md:pl-8 p-2">
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(0)"></div>
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(1)"></div>
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(2)"></div>
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(3)"></div>
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(4)"></div>
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(5)"></div>
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(6)"></div>
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(7)"></div>
+        <div class="cell border-2 border-blue-500  rounded  hover:bg-slate-300 hover:scale-110 transition-all max-w-28 flex justify-center items-center h-28 text-4xl" onclick="moveInBox(8)"></div>
     </div>
 
     <button onclick="restartGame()" id="restartBtn" class="transition ease-in-out delay-150 text-center text-xl text-white rounded w-1/2 h-10 mt-4 bg-blue-600 hover:text-xl hover:bg-blue-700">Restart Game</button>
   </div>
 
   <div id="game-over" class=" w-screen h-screen  justify-center items-center absolute bg-[rgba(0,0,0,0.5)] ">
-    <div class="container w-1/3 h-1/4 bg-white  rounded-md flex flex-col gap-4 justify-center items-center ">
-      <h2 id="winner-div" class="text-2xl"></h2>
-      <button class="w-1/2 h-1/4 bg-blue-500 rounded text-xl" onclick="restartGame()">Play Again?</button>
+    <div class="container md:w-1/3 w-1/2 h-1/4 bg-white  rounded-md flex flex-col gap-4 justify-center items-center ">
+      <h2 id="winner-div" class="md:text-2xl text-xl"></h2>
+      <button class="w-1/2 h-1/4 hover:bg-blue-600 text-white transition ease-in-out delay-150 bg-blue-500 rounded text-xl" onclick="restartGame()">Play Again?</button>
     </div>
   </div>
 
