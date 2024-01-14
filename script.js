@@ -96,6 +96,7 @@ currentPlayer = "X";
 gameState = ["", "", "", "", "", "", "", "", ""];
 
 document.querySelectorAll(".cell").forEach((el) => el.innerText = "");
+document.querySelectorAll(".input-ele").forEach((el) => el.value = "");
 gameRunning = true;
 players = {};
 
